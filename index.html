@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercier | Ferronnerie d'Art & Héritage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              black: '#050505',
+              suie: '#0F0F0F',
+              rust: '#8E2424',
+              gold: '#C5A059',
+              parchment: '#F5F5F0',
+              braise: '#E65100', // Plus intense
+              magma: '#FF5722', // Nouvelle couleur
+              iron: '#2A2A2A',
+              steel: '#4A4A4A',
+            },
+            fontFamily: {
+              serif: ['Playfair Display', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'smoke': 'smoke 15s ease-in-out infinite',
+              'glow-warm': 'glowWarm 6s infinite alternate',
+              'hammer': 'hammer 0.5s ease-in-out',
+              'fade-in': 'fadeIn 1s ease-out forwards',
+            },
+            keyframes: {
+              smoke: {
+                '0%, 100%': { transform: 'translateY(0) scale(1)', opacity: '0.1' },
+                '50%': { transform: 'translateY(-15px) scale(1.05)', opacity: '0.25' },
+              },
+              glowWarm: {
+                '0%': { opacity: '0.3', filter: 'blur(40px)' },
+                '100%': { opacity: '0.7', filter: 'blur(50px)' },
+              },
+              hammer: {
+                '0%, 100%': { transform: 'rotate(0deg)' },
+                '50%': { transform: 'rotate(-25deg)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #F5F5F0;
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3, .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      .textured-bg {
+        background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+        background-attachment: fixed;
+      }
+      .glass-heritage {
+        background: rgba(15, 15, 15, 0.85);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(197, 160, 89, 0.08);
+      }
+      .border-hammered {
+        border: 2px solid #C5A059;
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+        clip-path: polygon(2% 0%, 98% 0%, 100% 2%, 100% 98%, 98% 100%, 2% 100%, 0% 98%, 0% 2%);
+      }
+      .text-glow-warm {
+        text-shadow: 0 0 15px rgba(230, 81, 0, 0.5);
+      }
+      .vertical-text {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="textured-bg">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

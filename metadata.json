@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Ferronnerie d’Art Mercier",
+  "description": "Vitrine digitale haut de gamme pour un atelier de ferronnerie d'art alliant savoir-faire ancestral et design contemporain.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
